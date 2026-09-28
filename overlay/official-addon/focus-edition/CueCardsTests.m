@@ -10,6 +10,13 @@ int main(void){@autoreleasepool {
     assert(!TCCueCommandFresh(@{@"issuedAt":@100},116));
     assert(!TCCueCommandFresh(@{@"issuedAt":@200},110));
     assert(!TCCueCommandFresh(@{},110));
+    assert([TCCueWatchRouteAction(@{@"action":@"refresh"},110) isEqual:@"refresh"]);
+    assert([TCCueWatchRouteAction(@{@"action":@"showCard",@"projectID":@"deck",@"index":@0},110) isEqual:@"showCard"]);
+    assert([TCCueWatchRouteAction(@{@"action":@"addCard",@"projectID":@"deck",@"title":@"新增",@"copy":@"正文",@"afterCardID":@"card",@"requestID":@"unique",@"issuedAt":@109},110) isEqual:@"addCard"]);
+    assert([TCCueWatchRouteAction(@{@"action":@"next",@"session":@"session",@"card":@"card",@"revision":@0,@"issuedAt":@109},110) isEqual:@"next"]);
+    assert(!TCCueWatchRouteAction(@{@"action":@"addCard",@"projectID":@"deck",@"issuedAt":@109},110));
+    assert(!TCCueWatchRouteAction(@{@"action":@"next",@"session":@"session",@"revision":@0,@"issuedAt":@109},110));
+    assert(!TCCueWatchRouteAction(@{@"action":@"stop",@"issuedAt":@90},110));
     NSMutableDictionary *input=[@{@"title":@"项目演示",@"cards":@[Card(@"现状",@"已完成数据整理",YES),Card(@"结果",@"保留事实与限制",NO),Card(@"下一步",@"完成实机验证",YES)]} mutableCopy];
     NSDictionary *project=TCCueProject(input,&error);assert(project&&error==nil);
     NSDictionary *watchCard=TCCueCardFromText(@"手表新增",@"* 重点内容\n普通要点\n\n★ 第二条重点",&error);

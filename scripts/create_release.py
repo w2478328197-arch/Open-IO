@@ -7,7 +7,7 @@ from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 from verify_source import verify
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = 'v0.1.0'
+VERSION = 'v0.1.1'
 
 
 def main():

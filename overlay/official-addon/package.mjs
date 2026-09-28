@@ -5,7 +5,7 @@ import path from 'node:path';
 import { execFileSync as exec } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
-import {prepareCueWatch,copyCueWatch} from './cue-watch-package.mjs';
+import {prepareCueWatchForOutput,copyCueWatch} from './cue-watch-package.mjs';
 import {amapResources,copyAMapResources} from './amap-resources.mjs';
 import {validateTranslationPair,prepareTranslationResources,copyTranslationResources} from './local-translation/package-resources.mjs';
 import {patch as patchExperimentalOTA} from '../firmware-research/strix-1.0.4.12/src/patch-ios105-ota-source.mjs';
@@ -91,10 +91,8 @@ function main(){
 p=plistlib.loads(subprocess.check_output(['security','cms','-D','-i',sys.argv[1]],stderr=subprocess.DEVNULL))
 print(json.dumps({'entitlements':p['Entitlements'],'expires':p['ExpirationDate'].isoformat()+'Z','devices':p.get('ProvisionedDevices',[]),'certs':[hashlib.sha1(x).hexdigest().upper() for x in p['DeveloperCertificates']]}))`,o.profile],{encoding:'utf8'}));
   const entitlement=entitlementsFor(profile,o);
-  if(o['watch-app']&&!symbols.includes('_TCCueCardsStartWatch'))throw Error('addon_has_no_cue_watch_receiver');
   const watchParentInfo=o['watch-app']?JSON.parse(run('plutil',['-convert','json','-o','-',path.join(source,'Info.plist')],{encoding:'utf8'})):null;
-  const watchApp=prepareCueWatch(o['watch-app'],o.bundle,entitlement['com.apple.developer.team-identifier'],watchParentInfo);
-  fs.mkdirSync(destination,{mode:0o700});
+  const watchApp=prepareCueWatchForOutput(o,symbols,entitlement['com.apple.developer.team-identifier'],watchParentInfo);
   const app=path.join(destination,'Payload','Runner.app');
   run(process.execPath,[path.join(here,'macho-embed.mjs'),source,app,o.addon,o.bundle]);
   if(focusEdition){

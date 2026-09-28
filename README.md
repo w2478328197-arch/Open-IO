@@ -8,9 +8,9 @@
 
 | 功能 | 可以做什么 | 需要的设备与组件 | 下载与使用 |
 | --- | --- | --- | --- |
-| 待办同步 | 连接眼镜待办与 Apple 提醒事项，处理关联、完成状态与重复回执 | iPhone、眼镜；无需新装本项目眼镜固件 | [下载待办源码包](https://github.com/w2478328197-arch/Open-IO/releases/download/v0.1.0/OpenIO-todo-source-v0.1.0.zip) · [说明](docs/TODO.md) |
-| 提词卡 | 手机建立、编辑、导入卡片；手表追加卡片；眼镜显示与翻页同步 | iPhone、眼镜 TWK1 固件；Apple Watch 可选 | [下载提词卡源码包](https://github.com/w2478328197-arch/Open-IO/releases/download/v0.1.0/OpenIO-cue-source-v0.1.0.zip) · [说明](docs/CUE.md) |
-| 心率看板 · 户外跑步 | 手表记录跑步，眼镜显示心率及运动数据，结束后保存到 Apple 健康／健身 | iPhone、Apple Watch、眼镜 TWK1 固件 | [下载跑步源码包](https://github.com/w2478328197-arch/Open-IO/releases/download/v0.1.0/OpenIO-run-source-v0.1.0.zip) · [说明](docs/RUN.md) |
+| 待办同步 | 连接眼镜待办与 Apple 提醒事项，处理关联、完成状态与重复回执 | iPhone、眼镜；无需新装本项目眼镜固件 | [下载待办源码包](https://github.com/w2478328197-arch/Open-IO/releases/download/v0.1.1/OpenIO-todo-source-v0.1.1.zip) · [说明](docs/TODO.md) |
+| 提词卡 | 手机建立、编辑、导入卡片；手表追加卡片；眼镜显示与翻页同步 | iPhone、眼镜 TWK1 固件；Apple Watch 可选 | [下载提词卡源码包](https://github.com/w2478328197-arch/Open-IO/releases/download/v0.1.1/OpenIO-cue-source-v0.1.1.zip) · [说明](docs/CUE.md) |
+| 心率看板 · 户外跑步 | 手表记录跑步，眼镜显示心率及运动数据，结束后保存到 Apple 健康／健身 | iPhone、Apple Watch、眼镜 TWK1 固件 | [下载跑步源码包](https://github.com/w2478328197-arch/Open-IO/releases/download/v0.1.1/OpenIO-run-source-v0.1.1.zip) · [说明](docs/RUN.md) |
 
 三个包共享基础代码，包内默认选择对应功能；也可组合构建 `todo,cue,run`。同一 Bundle ID 每次安装会更新同一个 App，需要多项功能时请选择组合配置。提词卡和跑步共用 TWK1 固件，眼镜菜单中会同时保留两项入口；手机和手表按所选配置显示新增功能。Turbo IO 原有界面仍可能存在。
 
@@ -25,7 +25,7 @@ python3 openio.py build --workspace /absolute/OpenIO-workspace --bundle com.exam
 
 第一条命令读取固定版本的公开 Turbo IO 源码，再应用本包经过校验的增量源码。第二条构建手机扩展和适用的未签名手表 App。请将示例路径、Bundle ID 换成自己的值。
 
-[完整构建、签名与安装步骤](docs/INSTALL.md) · [版本与验证记录](docs/PRODUCT_SPEC.md) · [源码来源与许可](docs/LICENSING.md) · [发布附件与校验值](https://github.com/w2478328197-arch/Open-IO/releases/tag/v0.1.0)
+[完整构建、签名与安装步骤](docs/INSTALL.md) · [版本与验证记录](docs/PRODUCT_SPEC.md) · [源码来源与许可](docs/LICENSING.md) · [发布附件与校验值](https://github.com/w2478328197-arch/Open-IO/releases/tag/v0.1.1)
 
 ## 费用与分发
 

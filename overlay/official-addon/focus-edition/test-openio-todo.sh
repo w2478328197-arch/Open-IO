@@ -17,7 +17,7 @@ for unit in TodoProtocol TodoCompletionLedger TodoMirrorLedger; do
     "build/openio-todo-tests/$unit"
   fi
 done
-for unit in AppleTodoList AppleTodoMirror; do
+for unit in AppleCalendarSync AppleTodoList AppleTodoMirror; do
   xcrun clang -fobjc-arc -fmodules -Wall -Wextra -Wno-unused-parameter -Wno-incompatible-pointer-types \
     -framework Foundation -framework EventKit AppleCalendarSync.m "${unit}Tests.m" -o "build/openio-todo-tests/$unit"
   "build/openio-todo-tests/$unit"

@@ -1,6 +1,7 @@
 #import "AppleCalendarSync.h"
 #import <EventKit/EventKit.h>
 #import <objc/runtime.h>
+#import <CommonCrypto/CommonDigest.h>
 #include <assert.h>
 
 // Production creation code with isolated preferences and an in-memory EventKit
@@ -43,6 +44,13 @@ static TIOTodoListTestCalendar *List(NSString *name,NSString *identifier,BOOL wr
 static NSDictionary *Create(NSString *source){
     __block NSDictionary *result=nil;TIOAppleCreateReminder(@"合成待办",source,^(NSDictionary *value){result=value;});assert(result);return result;
 }
+static NSString *RelinkKey(NSString *source){
+    NSData *data=[source dataUsingEncoding:NSUTF8StringEncoding];unsigned char hash[CC_SHA256_DIGEST_LENGTH];
+    CC_SHA256(data.bytes,(CC_LONG)data.length,hash);
+    NSMutableString *key=[@"io.turboio.apple.todo." mutableCopy];
+    for(int i=0;i<CC_SHA256_DIGEST_LENGTH;i++)[key appendFormat:@"%02x",hash[i]];
+    return [key stringByAppendingString:@".needsRelink"];
+}
 
 int main(void){@autoreleasepool{
     NSString *suite=[@"io.turboio.todo-list-tests." stringByAppendingString:NSUUID.UUID.UUIDString];
@@ -73,6 +81,9 @@ int main(void){@autoreleasepool{
     assert([Create(@"test-device:4")[@"status"] isEqual:@"target_list_ambiguous"]&&Store.saves==3);
     Store.lists=@[work,replacement];replacement.allowsContentModifications=NO;
     assert([Create(@"test-device:4")[@"status"] isEqual:@"target_list_read_only"]&&Store.saves==3);
+    [Defaults setBool:YES forKey:RelinkKey(@"test-device:relink")];
+    assert(TIOAppleNeedsRelink(@"test-device:relink"));
+    assert([Create(@"test-device:relink")[@"status"] isEqual:@"needs_relink"]&&Store.saves==3);
     [Defaults removePersistentDomainForName:suite];
     puts("PASS: dedicated todo list, unchanged system default, exact ID retention, no fallback, ambiguity/read-only guards and dedup.");
 }return 0;}

@@ -15,6 +15,9 @@ FOUNDATION_EXPORT BOOL TIOAppleHasPendingReminderCompletion(void);
 FOUNDATION_EXPORT NSString * _Nullable TIOAppleCompletionTitleFromUtterance(NSString *utterance);
 FOUNDATION_EXPORT BOOL TIOAppleIsCompletionConfirmation(NSString *utterance);
 FOUNDATION_EXPORT BOOL TIOAppleHasLinkedReminder(NSString *sourceID);
+FOUNDATION_EXPORT BOOL TIOAppleNeedsRelink(NSString *sourceID);
+FOUNDATION_EXPORT NSDictionary *TIOAppleRecoveryMatch(NSString * _Nullable savedExternalIdentifier,
+    NSString *expectedTitle, NSArray<NSDictionary *> *candidates);
 // Read the exact saved Apple item when the glasses no longer include its row.
 // This never changes the reminder's completion state or matches by title.
 FOUNDATION_EXPORT void TIOAppleReadLinkedReminder(NSString *sourceID,void (^completion)(NSDictionary *result));

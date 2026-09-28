@@ -1,7 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
 import {validateOptions,entitlementsFor,validateResearchPair} from './package.mjs';
+import {copyCueWatch,prepareCueWatchForOutput,validateCueWatchMetadata} from './cue-watch-package.mjs';
 const o={app:'/example/Runner.app',addon:'/example/addon.dylib',profile:'/example/profile.mobileprovision',out:'/example/new-output',identity:'A'.repeat(40),device:'synthetic-device',bundle:'com.example.test'};
 test('TWK1 requires the separate target and rejects corrupted or cross-profile firmware',()=>{
   const n={...o,'experimental-ota':'TWK1','private-ota-target':'1',firmware:'/example/TWK1.zip'};
@@ -101,4 +104,38 @@ test('phone-only Focus stays on the separate bundle and cannot carry firmware',(
   validateResearchPair(symbols,undefined,undefined,true);
   assert.throws(()=>validateResearchPair(symbols.replace('_TIOPhoneOnlyFocusBuild',''),undefined,undefined,true));
   assert.throws(()=>validateResearchPair(symbols,'TFP1',Buffer.alloc(0),true));
+});
+
+const watchBundle='com.example.test.watchkitapp';
+const watchTeam='TEAM123ABC';
+const watchInfo={CFBundleIdentifier:watchBundle,WKCompanionAppBundleIdentifier:o.bundle,WKApplication:true,CFBundleVersion:'201',CFBundleShortVersionString:'1.0.5',NSHealthShareUsageDescription:'Synthetic test usage'};
+const watchEntitlements={'com.apple.developer.team-identifier':watchTeam,'application-identifier':`${watchTeam}.${watchBundle}`,'com.apple.developer.healthkit':true};
+function outputFixture(t){const root=fs.mkdtempSync(path.join(os.tmpdir(),'openio-watch-package-'));t.after(()=>fs.rmSync(root,{recursive:true,force:true}));return {out:path.join(root,'output')};}
+
+test('no Watch companion is allowed without creating a Watch payload',t=>{
+  const {out}=outputFixture(t);
+  const watch=prepareCueWatchForOutput({...o,out},'',watchTeam,null);
+  assert.equal(watch,null);
+  assert.equal(fs.existsSync(out),true);
+  copyCueWatch(watch,out);
+  assert.equal(fs.existsSync(path.join(out,'Watch')),false);
+});
+test('valid Watch metadata passes preflight before output creation',t=>{
+  const {out}=outputFixture(t),options={...o,'watch-app':'/synthetic/CueCardsWatch.app',out};
+  const watch=prepareCueWatchForOutput(options,'_TCCueCardsStartWatch',watchTeam,{CFBundleVersion:'201',CFBundleShortVersionString:'1.0.5'},{
+    prepare:(source,companion,team,parent)=>{validateCueWatchMetadata(watchInfo,watchEntitlements,companion,team,parent);return source;}
+  });
+  assert.equal(watch,options['watch-app']);assert.equal(fs.existsSync(out),true);
+});
+test('wrong Watch identity leaves output untouched',t=>{
+  const {out}=outputFixture(t),options={...o,'watch-app':'/synthetic/CueCardsWatch.app',out};
+  assert.throws(()=>prepareCueWatchForOutput(options,'_TCCueCardsStartWatch',watchTeam,{CFBundleVersion:'201',CFBundleShortVersionString:'1.0.5'},{
+    prepare:(source,companion,team,parent)=>validateCueWatchMetadata({...watchInfo,CFBundleIdentifier:'com.example.other.watchkitapp'},watchEntitlements,companion,team,parent)
+  }),{message:'watch_companion_identity_mismatch'});
+  assert.equal(fs.existsSync(out),false);
+});
+test('missing Watch receiver leaves output untouched',t=>{
+  const {out}=outputFixture(t);
+  assert.throws(()=>prepareCueWatchForOutput({...o,'watch-app':'/synthetic/CueCardsWatch.app',out},'',watchTeam,null),{message:'addon_has_no_cue_watch_receiver'});
+  assert.equal(fs.existsSync(out),false);
 });

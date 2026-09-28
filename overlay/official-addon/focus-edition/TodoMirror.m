@@ -28,7 +28,7 @@ static void Schedule(void){if(Queued)return;Queued=YES;dispatch_after(dispatch_t
 static void Drain(void){
     if(!Ledger||!MirrorDevice.length)return;NSTimeInterval now=NSDate.date.timeIntervalSince1970;
     for(NSDictionary *r in [Ledger recordsForDevice:MirrorDevice]){
-        NSString *source=r[@"source"];if(![r[@"active"] boolValue]||[InFlight containsObject:source]||[RetryAt[source] doubleValue]>now)continue;
+        NSString *source=r[@"source"];if(![r[@"active"] boolValue]||TIOAppleNeedsRelink(source)||[InFlight containsObject:source]||[RetryAt[source] doubleValue]>now)continue;
         NSDictionary *pending=r[@"pendingApple"];
         if(![r[@"bound"] boolValue]){[InFlight addObject:source];
             TIOAppleBindTodoIdentity(source,r[@"apple"],^(NSDictionary *result){[InFlight removeObject:source];[Ledger boundSource:source result:result];if(![result[@"status"] isEqual:@"linked"])RetryAt[source]=@(NSDate.date.timeIntervalSince1970+20);SaveDiag();Schedule();});continue;}
@@ -55,6 +55,7 @@ void TIOTodoMirrorRefresh(void){
             NSMutableArray *apple=[NSMutableArray array];
             for(NSDictionary *item in result[@"items"]){NSMutableDictionary *copy=[item mutableCopy];NSMutableArray *sources=[NSMutableArray array];
                 for(NSDictionary *row in OfficialRows){NSString *source=[NSString stringWithFormat:@"%@:%@",device,row[@"wireId"]];NSDictionary *link=TIOAppleTodoLinkIdentity(source);
+                    if(TIOAppleNeedsRelink(source))continue;
                     BOOL exact=[link[@"identifier"] length]&&[link[@"identifier"] isEqual:item[@"identifier"]];
                     BOOL external=[link[@"externalIdentifier"] length]&&[link[@"externalIdentifier"] isEqual:item[@"externalIdentifier"]]&&[link[@"calendarIdentifier"] isEqual:item[@"calendarIdentifier"]];if(exact||external)[sources addObject:source];}
                 if(sources.count==1)copy[@"sourceID"]=sources.firstObject;
