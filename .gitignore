@@ -1,0 +1,11 @@
+build/
+workspace/
+__pycache__/
+.venv/
+*.ipa
+*.app/
+*.mobileprovision
+*.p12
+*.pem
+*.key
+.DS_Store

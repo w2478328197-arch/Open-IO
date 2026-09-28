@@ -1,0 +1,22 @@
+# Executed by the generated 13-slot test, after its original exact-count patches.
+change('menu13-real-sync-arm.json','menu14-real-sync-arm.json')
+change('native-thirteen-TFP1-CUE','native-fourteen-TFP1-CUE-TWK1')
+change('u.mem_write(SLOT,bytes(64))','u.mem_write(SLOT,bytes(80))')
+change('13+27*max(0,min(12,n))','12+25*max(0,min(13,n))')
+change('min(12,max(0,min(359,n))//27)','min(13,max(0,min(359,n))//25)')
+change('for start in range(13):',"selected(12);call(0x1079a310,APP,600);assert word(APP+0x88)==13\n selected(13);call(0x1079a310,APP,-600);assert word(APP+0x88)==12\n for start in range(14):")
+change('word(APP+0x88)<=12','word(APP+0x88)<=13')
+change('12.46<readfp(APP+0xa8)<12.47','13.46<readfp(APP+0xa8)<13.47')
+change('range(1,115)','range(1,140)')
+change("scenario('focuspage')]","scenario('focuspage'),scenario('workoutpage')]")
+for old,new in [(202,187),(229,212),(256,237),(283,262),(310,287),(337,312)]:
+    change(f'if frame=={old}:',f'if frame=={new}:')
+for old,new in [(202,187),(229,212),(256,237)]:
+    change(f'assert word(APP+0x90)=={old}',f'assert word(APP+0x90)=={new}')
+change('if frame==312:',"if frame==337:\n    assert objects[word(SLOT+64)]['opa']==255 and not objects[word(SLOT+64)]['hidden']\n    assert objects[word(SLOT+72)]['opa']==255 and not objects[word(SLOT+72)]['hidden']\n    assert objects[word(SLOT+76)]['size']==(12,4)\n    assert objects[word(SLOT+56)]['hidden']\n   if frame==312:")
+change("assert len([o for o in objects.values() if o['parent']==word(APP+0x60)])==13", "assert len([o for o in objects.values() if o['parent']==word(APP+0x60)])==14")
+change("for name in ['stock_ctor'", "calls[syms['tw_slot_open']&~1]='tw_slot_open'\n for name in ['stock_ctor'")
+change("elif name=='tn_slot_open':", "elif name=='tw_slot_open':nav[0]=fail_at!='workoutpage';ret(nav[0])\n  elif name=='tn_slot_open':")
+change("call(0x10799896,APP);assert word(APP+0xe8)==0", "call(0x1079a784,APP);selected(13);call(0x1079a890,APP,0);assert nav[0]==(fail_at!='workoutpage')\n if nav[0]:call(0x1079a310,APP,-600);assert word(APP+0x88)==13\n call(0x1079a7b8,APP);assert not nav[0]\n call(0x10799896,APP);assert word(APP+0xe8)==0")
+change("'thirteenthMenuDistinct':True", "'thirteenthMenuDistinct':True,'nativeWheelIndex13':True,'workoutMenuEnterExit':True")
+change('Native thirteen-item menu ARM offline test','Native fourteen-item menu ARM offline test')

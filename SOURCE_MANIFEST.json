@@ -1,0 +1,547 @@
+{
+  "schema": 1,
+  "upstream": "Turbo1123/Turbo-IO",
+  "upstreamCommit": "ca7bc09fbbf036eaf32e90797302d1c798d9e5a4",
+  "files": [
+    {
+      "path": "apps/CueCardsWatch/CueCardsWatchApp.swift",
+      "bytes": 19205,
+      "sha256": "83f47a42e4c38f8a166e2d12e59db8a32edc25993386cf8b36191b8b4d043df5"
+    },
+    {
+      "path": "apps/CueCardsWatch/HeartRateModel.swift",
+      "bytes": 21207,
+      "sha256": "f6651d7dc622101b5fb1914aa9931fbbfc8b3bff4e9785e566c16efbd36c1659"
+    },
+    {
+      "path": "apps/CueCardsWatch/HeartRateWatchView.swift",
+      "bytes": 4586,
+      "sha256": "a01cda5f575d310eb5af4fe578dfe6fd3011fad17e708ebcc620a3b55ec15850"
+    },
+    {
+      "path": "apps/CueCardsWatch/WorkoutCadenceWindow.swift",
+      "bytes": 1083,
+      "sha256": "533e455c50db7884b9f2c9a6bc3da03f13ec26eb36e84e8263f55feb8fd7d352"
+    },
+    {
+      "path": "apps/CueCardsWatch/build.sh",
+      "bytes": 1719,
+      "sha256": "555e5550f8e09d0ad31c9973f75fda93ff00186ebfc6a389fb481232d826da61"
+    },
+    {
+      "path": "apps/CueCardsWatch/project.yml",
+      "bytes": 1804,
+      "sha256": "81053176d881883510a1eaa4a2ab26306d68840ba6ec75f157f4a3c25eed1007"
+    },
+    {
+      "path": "apps/CueCardsWatch/tests/WorkoutCadenceTests.swift",
+      "bytes": 1441,
+      "sha256": "6690a8cca6ade35d7b376fa7e3fce51bf3f0915634f4153dc5561e315e480a68"
+    },
+    {
+      "path": "firmware-research/strix-1.0.4.12/native-navigation/cue-cards/build.py",
+      "bytes": 7599,
+      "sha256": "2e5946c72f645ef7065c03de7980681714b7c051353d8e57dddec54a20ec0043"
+    },
+    {
+      "path": "firmware-research/strix-1.0.4.12/native-navigation/cue-cards/cue_view_test.c",
+      "bytes": 3367,
+      "sha256": "0df1885dda2169ffde4fc08653ac0ad1f152b9886680268656db8911f360ff42"
+    },
+    {
+      "path": "firmware-research/strix-1.0.4.12/native-navigation/cue-cards/prepare_menu13.py",
+      "bytes": 19072,
+      "sha256": "8c20e00021db6a61faef9f08cec4863bf39e158d4dd68265882fd3ce288af850"
+    },
+    {
+      "path": "firmware-research/strix-1.0.4.12/native-navigation/cue-cards/reader.c",
+      "bytes": 9867,
+      "sha256": "f0f0a4078b081519e321f5a355667fdc554aa310678077ae19af624b05910169"
+    },
+    {
+      "path": "firmware-research/strix-1.0.4.12/native-navigation/cue-cards/reader_service.c",
+      "bytes": 14588,
+      "sha256": "d4b639197f125dd1858bf49f416637af2fa4395c53e1f39c5581df871c5da0e9"
+    },
+    {
+      "path": "firmware-research/strix-1.0.4.12/native-navigation/cue-cards/reader_view.c",
+      "bytes": 5043,
+      "sha256": "f1298eb92e9bb74ec786821aef20564f00e93c37c3088c9d8dfdc8a8db93b55a"
+    },
+    {
+      "path": "firmware-research/strix-1.0.4.12/native-navigation/cue-cards/test_cue_open_arm.py",
+      "bytes": 3472,
+      "sha256": "34f68715a28518cf4fd1163e26022f94b20ad28acfaa035e67dcbacb9a40f8f6"
+    },
+    {
+      "path": "firmware-research/strix-1.0.4.12/native-navigation/cue-cards/toolchain.lock.json",
+      "bytes": 972,
+      "sha256": "2604db974304cda2eb0b40618dece788dca499a919586786e5234ecdef2bb8a3"
+    },
+    {
+      "path": "firmware-research/strix-1.0.4.12/native-navigation/focus/src/official-addon/research/build-image-rx-candidate.py",
+      "bytes": 25351,
+      "sha256": "0758e7d61d7c511891a2bbd8aea98ebd59102ae94362b84da767e2a4c3a68e5e"
+    },
+    {
+      "path": "firmware-research/strix-1.0.4.12/native-navigation/focus/src/official-addon/research/weread-v1/reader_input.h",
+      "bytes": 1706,
+      "sha256": "60fc47bd3289c0099fd910755d430923131557dd540905e8ad06150c1672d7c1"
+    },
+    {
+      "path": "firmware-research/strix-1.0.4.12/native-navigation/focus/src/official-addon/research/weread-v1/test_reader_arm.py",
+      "bytes": 7133,
+      "sha256": "819f39bd312a78e86046e79d971b75fc04e8fa4ccf76218b4a4d748cc3266a1f"
+    },
+    {
+      "path": "firmware-research/strix-1.0.4.12/native-navigation/workout/make-glyphs.swift",
+      "bytes": 1452,
+      "sha256": "7fa3b462d4600c2caea13362e856171130bdb72380bb0da9c1f0e5e8a37761ff"
+    },
+    {
+      "path": "firmware-research/strix-1.0.4.12/native-navigation/workout/menu14_test_overlay.py",
+      "bytes": 2383,
+      "sha256": "d7a8d5da5749e9c51c85a1b78098f345e7391df44dfd44b5ed8040cec9283c9d"
+    },
+    {
+      "path": "firmware-research/strix-1.0.4.12/native-navigation/workout/prepare.py",
+      "bytes": 6373,
+      "sha256": "024f2f42a5611251adb79f8b6c6c68a7fa7313390bdace4a8f8385d631831533"
+    },
+    {
+      "path": "firmware-research/strix-1.0.4.12/native-navigation/workout/prepare_menu14.py",
+      "bytes": 6874,
+      "sha256": "950a7b495c31dc1385e944431222aa7a1852e4040da6913527732e92d8f64c4d"
+    },
+    {
+      "path": "firmware-research/strix-1.0.4.12/native-navigation/workout/test_workout_arm.py",
+      "bytes": 5601,
+      "sha256": "f5ccc07429e64996c4b56ae2f8e10564fb06d500cb61f8539e81ffb738bca873"
+    },
+    {
+      "path": "firmware-research/strix-1.0.4.12/native-navigation/workout/workout_glyphs.h",
+      "bytes": 20006,
+      "sha256": "bcc151be986f056f5ad29b71cbec662b2d96e953406a0f27063fef4a566be65e"
+    },
+    {
+      "path": "firmware-research/strix-1.0.4.12/native-navigation/workout/workout_menu_service.inc",
+      "bytes": 2652,
+      "sha256": "b6e6395cb4ea19444d39932d1d488e1a0d7b5a5bae74de4055c0d61746db6a40"
+    },
+    {
+      "path": "firmware-research/strix-1.0.4.12/native-navigation/workout/workout_view.inc",
+      "bytes": 5528,
+      "sha256": "4f27b3fc1dd1eba7a2e70cab3afeeeb3122ce57e347e36ca76929c2b8dabe51f"
+    },
+    {
+      "path": "firmware-research/strix-1.0.4.12/native-navigation/workout/workout_view_test.c",
+      "bytes": 5990,
+      "sha256": "688c25fcfcdd15dc3504dd19b225c6c1d04ed45a9dcc93624cd76cb248f7b77a"
+    },
+    {
+      "path": "firmware-research/strix-1.0.4.12/native-navigation/workout/workout_wire.h",
+      "bytes": 4360,
+      "sha256": "9311e3e78a37e84891cf105753fc678ccc2f5cb00e5ced335c2d307318c84405"
+    },
+    {
+      "path": "firmware-research/strix-1.0.4.12/native-navigation/workout/workout_wire_test.c",
+      "bytes": 2084,
+      "sha256": "ec131fe520bd253b55017fef46e0b3fb8ba1ce6c91687e79a756eb442003385f"
+    },
+    {
+      "path": "official-addon/cue-watch-package.mjs",
+      "bytes": 4552,
+      "sha256": "375380600396eb04c8d5a3993af7bc560ac18391b6ecc255fd5cf565b61ee55c"
+    },
+    {
+      "path": "official-addon/cue-watch-package.test.mjs",
+      "bytes": 3560,
+      "sha256": "49456acf161d2db205987874f25182a8743e3cd587258032ac70633cf4d1e7be"
+    },
+    {
+      "path": "official-addon/focus-edition/Addon.m",
+      "bytes": 71607,
+      "sha256": "2ae30c78585183ad6b50fd8a932a141591884c7cb5013bd54af0149e6e30a275"
+    },
+    {
+      "path": "official-addon/focus-edition/AppleCalendarSync.h",
+      "bytes": 2678,
+      "sha256": "c88fdf387bcf8ef7cffd12bcb8bed29b90df0caac7319534d735dc131b9e9e5d"
+    },
+    {
+      "path": "official-addon/focus-edition/AppleCalendarSync.m",
+      "bytes": 36637,
+      "sha256": "1cb7e2e5bab85049cbb3e75d721f1604f38dc7b314777bf1d0e304b3c17d7596"
+    },
+    {
+      "path": "official-addon/focus-edition/AppleTodoListTests.m",
+      "bytes": 5054,
+      "sha256": "c0ea7c60c5a2575f37708179468de523302c4319526cc8ea1f55395135a91a97"
+    },
+    {
+      "path": "official-addon/focus-edition/AppleTodoMirrorTests.m",
+      "bytes": 6967,
+      "sha256": "4b79af85be15e5dedf851a57ba4d449e5d9f91aedd5ab94f4a4d4284f2d72fa2"
+    },
+    {
+      "path": "official-addon/focus-edition/CueCards.h",
+      "bytes": 1566,
+      "sha256": "96a7cd833382e210ff4b569931cd28d5d8c3badd38faf714056968b6f0968fa0"
+    },
+    {
+      "path": "official-addon/focus-edition/CueCards.m",
+      "bytes": 21065,
+      "sha256": "c877d7933328ea5a1a11b84ee4eda356cbb50c08a2cfed972a7e8fa113f2e652"
+    },
+    {
+      "path": "official-addon/focus-edition/CueCardsCore.h",
+      "bytes": 1675,
+      "sha256": "075fbf080401c76fb04cd924a88ce33ef6a0fc013bf91c2357161136a9965a0f"
+    },
+    {
+      "path": "official-addon/focus-edition/CueCardsCore.m",
+      "bytes": 17868,
+      "sha256": "a349991e012c4413302b8ec4420c8a8a89744b3f2b7a8fb5ead691ce7fa3a162"
+    },
+    {
+      "path": "official-addon/focus-edition/CueCardsTests.m",
+      "bytes": 9843,
+      "sha256": "aa804611815aebe1aea5bfb447cac1045b5d14bbb9c8347d88c9c2cf2cd9113d"
+    },
+    {
+      "path": "official-addon/focus-edition/CueCardsUI.m",
+      "bytes": 26291,
+      "sha256": "8a34612aee63fdf8034e5f45a0133a16deb7c2853a9ca9bf56c08724fe5efe21"
+    },
+    {
+      "path": "official-addon/focus-edition/DisplayPhoneUI.m",
+      "bytes": 21338,
+      "sha256": "a84ff4d3311adabef9099e82bf1c6ee30d134647046adf7204904613096ed54f"
+    },
+    {
+      "path": "official-addon/focus-edition/EditorialShell.inc",
+      "bytes": 21716,
+      "sha256": "03cbe834104437d7e1b1bdc8fb55e8d032988bc8f3f2e5a5245465ca084155db"
+    },
+    {
+      "path": "official-addon/focus-edition/ExperimentalOTA.h",
+      "bytes": 2455,
+      "sha256": "ab127e858e4c77707a6506fee0eac739a59ca3e86abcddd93c806842163ca80e"
+    },
+    {
+      "path": "official-addon/focus-edition/ExperimentalOTA.m",
+      "bytes": 16996,
+      "sha256": "3044a870e021a1d855577f1509a1cf6b5315716579939983a9f01dec10c71232"
+    },
+    {
+      "path": "official-addon/focus-edition/ExperimentalOTAFeed.h",
+      "bytes": 1124,
+      "sha256": "2a46a2f6ae67a7f8bad92eccdfb2211ff03ff4c87dc1df5fe6aac70889a22de4"
+    },
+    {
+      "path": "official-addon/focus-edition/ExperimentalOTAFeed.m",
+      "bytes": 19013,
+      "sha256": "37544988ec763db315895f490f7b6bb3ba72f93399e34b8200421aa4c54e05ff"
+    },
+    {
+      "path": "official-addon/focus-edition/ExperimentalOTAFlash.h",
+      "bytes": 1340,
+      "sha256": "75ff423ea01d8d8a8328b7401c35dbf2ac2f99e09b8a65296ca3436a265b7e32"
+    },
+    {
+      "path": "official-addon/focus-edition/ExperimentalOTAFlash.m",
+      "bytes": 15640,
+      "sha256": "2e853a443bace0ac902ffeecc3288f480b6fa8a54d26474164b25c1079607158"
+    },
+    {
+      "path": "official-addon/focus-edition/ExperimentalOTAGuard.m",
+      "bytes": 3605,
+      "sha256": "664b0770087689d88b08598452d35c249c505d44ab0103ce9567b63f980c4350"
+    },
+    {
+      "path": "official-addon/focus-edition/ExperimentalOTAProfilesTests.m",
+      "bytes": 9817,
+      "sha256": "86ecaded7c64549cc716dab7e35243578b726cb7580381e881d7b344539c5006"
+    },
+    {
+      "path": "official-addon/focus-edition/ExperimentalOTATests.m",
+      "bytes": 2851,
+      "sha256": "7422ddd0a022b292e66d0a31e54db20ac3b2effe8bc867834d1a6a9ac0f34434"
+    },
+    {
+      "path": "official-addon/focus-edition/ExperimentalOTAUI.h",
+      "bytes": 410,
+      "sha256": "61053ad3e3d9144d7295efb8fdcadff7f251cecdcc29a5c78deb5742a3dea170"
+    },
+    {
+      "path": "official-addon/focus-edition/ExperimentalOTAUI.m",
+      "bytes": 24223,
+      "sha256": "272f719105e59b1442d222609b464ff0fe3a2d265450fb599eb3cf9aadcf652c"
+    },
+    {
+      "path": "official-addon/focus-edition/HeartRateBridgeTests.m",
+      "bytes": 5343,
+      "sha256": "b5e3ac481d7db4050485958d260f8199a67dd99e8feb8370268e089c8d4f2e48"
+    },
+    {
+      "path": "official-addon/focus-edition/HeartRatePhoneUI.h",
+      "bytes": 77,
+      "sha256": "cc058b560f55d15816c43a4066d55229b0958f70e2f13218292be7bc1c03ce70"
+    },
+    {
+      "path": "official-addon/focus-edition/HeartRatePhoneUI.m",
+      "bytes": 5199,
+      "sha256": "e1d9ba7dd77deaa71dbde947ff9286b75697198e20cc1e6a8049a22bb3ccfdd7"
+    },
+    {
+      "path": "official-addon/focus-edition/HeartRateWatchBridge.h",
+      "bytes": 459,
+      "sha256": "3d02c6d7362393b60bfef2eb9fe5bb6ac65d622485cedce0ad47226436f831d6"
+    },
+    {
+      "path": "official-addon/focus-edition/HeartRateWatchBridge.m",
+      "bytes": 8622,
+      "sha256": "d3049f8a2ef0743b2725e0cb4cbae9179c60524a7e1f22cc388c67be00f8dcf2"
+    },
+    {
+      "path": "official-addon/focus-edition/MusicPlayer.m",
+      "bytes": 15127,
+      "sha256": "b3a5aa9dcc5cd162086390553f086b3e46d7a9bccaa7e5c5c1d795269db70754"
+    },
+    {
+      "path": "official-addon/focus-edition/NativeNavigation.h",
+      "bytes": 1379,
+      "sha256": "b704166f274eece30dce98f98545e13cb62a582a3cc785e11b382573460232ab"
+    },
+    {
+      "path": "official-addon/focus-edition/NativeNavigation.m",
+      "bytes": 15400,
+      "sha256": "a4ebbcf130d395f41fd4832c9770b36187fe33c1b4b3c5b8cb0a21805a825a0b"
+    },
+    {
+      "path": "official-addon/focus-edition/NativeNavigationUI.m",
+      "bytes": 4534,
+      "sha256": "43a4c24df7f143432dd5bf8e84e261eee5582081f917d6cb4ddf646929c600bf"
+    },
+    {
+      "path": "official-addon/focus-edition/NavigationModes.h",
+      "bytes": 1316,
+      "sha256": "1a2dfc3b5a6c54ae6e24c2a95cd0f98ebce002c0052ca3c05f7f18ec5dca3c6e"
+    },
+    {
+      "path": "official-addon/focus-edition/NavigationUI.m",
+      "bytes": 44006,
+      "sha256": "58a337e1819a68b9ca216f1c42ec64dd2836c0b906e1806c9578cce627efcb3d"
+    },
+    {
+      "path": "official-addon/focus-edition/OpenIOFeatures.h",
+      "bytes": 401,
+      "sha256": "c82c5959f00803735bd0e003c3e1f945657ee501f2e0058176d719d92e7948da"
+    },
+    {
+      "path": "official-addon/focus-edition/ProtocolContext.m",
+      "bytes": 8189,
+      "sha256": "c333111e179cca7ab7d6dd154e0dabe2cd613a5f73d56636528757c4cc81e8fc"
+    },
+    {
+      "path": "official-addon/focus-edition/ReaderBridge.h",
+      "bytes": 726,
+      "sha256": "b7057cba45b50d94fc058205fdddd1be02b5424ad63bf7f777107be19207141e"
+    },
+    {
+      "path": "official-addon/focus-edition/ReaderBridge.m",
+      "bytes": 12679,
+      "sha256": "5505de339c0cde569a1ccdc75c93f5145a780ea77799b5f637423ae7347870c9"
+    },
+    {
+      "path": "official-addon/focus-edition/ReaderUI.h",
+      "bytes": 342,
+      "sha256": "5ab3416ec338d3e53e46c56eb5e8056ae28a52fc7830c87224d7445baa37d5e0"
+    },
+    {
+      "path": "official-addon/focus-edition/ReaderUI.m",
+      "bytes": 29525,
+      "sha256": "42410eaae1b81301a05408c882fcbff5e8e8506e3e229f54db8e07a8b07d1930"
+    },
+    {
+      "path": "official-addon/focus-edition/ResearchCatalog.m",
+      "bytes": 6205,
+      "sha256": "f49585e1c45cf2ea56783e3162e831fcc5a8f51e2e8789d12f4c1180cb7d2dac"
+    },
+    {
+      "path": "official-addon/focus-edition/ResearchUI.m",
+      "bytes": 7340,
+      "sha256": "ef13c832267bcd8fd7755160a10ad757dffc4c6fdce433ffd1206845600cf73e"
+    },
+    {
+      "path": "official-addon/focus-edition/TNVTransport.h",
+      "bytes": 446,
+      "sha256": "f3fdf4d621de97738db1e531df005b9e46be316acbd2ec37a0175136072ea169"
+    },
+    {
+      "path": "official-addon/focus-edition/TNVTransport.m",
+      "bytes": 4618,
+      "sha256": "2668fdfe0f4af9131ccb85a02e5fa266a2a43e1af87e8ca7e8d4c49b7934809b"
+    },
+    {
+      "path": "official-addon/focus-edition/TodoCompletionLedger.h",
+      "bytes": 978,
+      "sha256": "b0c30f6e425a0b2da8b154b3c01152887e72eddae543bd1b47351475497f1582"
+    },
+    {
+      "path": "official-addon/focus-edition/TodoCompletionLedger.m",
+      "bytes": 6361,
+      "sha256": "2e94db22d53a27754e35f5b340e415ce98580eed3c5c6ec92def4ae93f38fd9e"
+    },
+    {
+      "path": "official-addon/focus-edition/TodoCompletionLedgerTests.m",
+      "bytes": 5832,
+      "sha256": "645033e69d88b4c7254402ebec0ebee748a7aa646a6a6791d9bef23281b687e2"
+    },
+    {
+      "path": "official-addon/focus-edition/TodoMirror.h",
+      "bytes": 844,
+      "sha256": "7a92f98acfcf75f48778893272c1a0e13416334c1e943dd6c1743553db203a3b"
+    },
+    {
+      "path": "official-addon/focus-edition/TodoMirror.m",
+      "bytes": 13669,
+      "sha256": "362727d6e6e577119255055e01db18a09db53d6c3219f9b9487468e03628bb29"
+    },
+    {
+      "path": "official-addon/focus-edition/TodoMirrorLedger.h",
+      "bytes": 1189,
+      "sha256": "a5ed379c79962e4c435bc7556deb8ebf210a5c1494bc729c48cce3730b21b64c"
+    },
+    {
+      "path": "official-addon/focus-edition/TodoMirrorLedger.m",
+      "bytes": 10115,
+      "sha256": "dac9a72031a706ee27b718435e9a6c4776969d2daf7b9d42e09d160bb9aaf87a"
+    },
+    {
+      "path": "official-addon/focus-edition/TodoMirrorLedgerTests.m",
+      "bytes": 7967,
+      "sha256": "b7dfe6728976bdfe6119fdc5bbe66fa7563a15468c94290e76940bd53f113332"
+    },
+    {
+      "path": "official-addon/focus-edition/TodoProtocol.h",
+      "bytes": 4069,
+      "sha256": "326ae7397499116a3c1e7510a5010add8ae882f7c74145cc63d574222c0085b6"
+    },
+    {
+      "path": "official-addon/focus-edition/TodoProtocol.m",
+      "bytes": 17682,
+      "sha256": "ba568c4487d2c9a206ab100121747a0b3aa55ae4f1b68bb3209d70e8ab634ad5"
+    },
+    {
+      "path": "official-addon/focus-edition/TodoProtocolTests.m",
+      "bytes": 11828,
+      "sha256": "d99fbd732ee2ae9871bc978b9311294045bf19ec95f6065f2861a0f2addae93e"
+    },
+    {
+      "path": "official-addon/focus-edition/TodoRuntime.h",
+      "bytes": 683,
+      "sha256": "8ac14f374011d90bcc89d20ab19c87dd166f2434da4218b90745f8827947876a"
+    },
+    {
+      "path": "official-addon/focus-edition/TodoRuntime.m",
+      "bytes": 95911,
+      "sha256": "85fcfd4785ab26f27bca8f9b6d676db05c5e45357963948f4ed29dc660e4a3ce"
+    },
+    {
+      "path": "official-addon/focus-edition/TrainingDashboardRenderer.h",
+      "bytes": 259,
+      "sha256": "4d56d63f7dcca29db0b115fa8e05db67aa64bf0c7b56a11c2eb3da7f7c57f833"
+    },
+    {
+      "path": "official-addon/focus-edition/TrainingDashboardRenderer.m",
+      "bytes": 4181,
+      "sha256": "1a33e6e510c41c3043cb23400aaf2382a59bcbb70767268539da77bbc4882b11"
+    },
+    {
+      "path": "official-addon/focus-edition/WorkoutDashboardCore.h",
+      "bytes": 486,
+      "sha256": "1bda7a28ad7fb18e3cc0ae5b7fd6c478ba3e988e533e5ca3c9b7196d013d24bf"
+    },
+    {
+      "path": "official-addon/focus-edition/WorkoutDashboardCore.m",
+      "bytes": 11266,
+      "sha256": "f2f219ae5a3d6bdcbccd710a2b64ac87b2602284d0a608ccccb85e1edc577df9"
+    },
+    {
+      "path": "official-addon/focus-edition/WorkoutDashboardTests.m",
+      "bytes": 6781,
+      "sha256": "612a715485bde2876525e35c87e91f5d527b9052c4233e972041ae81a1bafa4c"
+    },
+    {
+      "path": "official-addon/focus-edition/WorkoutGlasses.h",
+      "bytes": 185,
+      "sha256": "7aa76411c7e30d39fd2a8f9cf113d232fcf46b6f6446cab9a2f0fa300bc6cd0d"
+    },
+    {
+      "path": "official-addon/focus-edition/WorkoutGlasses.m",
+      "bytes": 6142,
+      "sha256": "3f3cb8573714fcebf6792b368b9322e7b5b78638efbda6125a2d75f12290225c"
+    },
+    {
+      "path": "official-addon/focus-edition/WorkoutOTAPins.h",
+      "bytes": 1812,
+      "sha256": "d51e6f245179d9ac62616ff1698e7b0d274fb334c9d3cb100e9d8a338d645bd6"
+    },
+    {
+      "path": "official-addon/focus-edition/WorkoutTransportTests.m",
+      "bytes": 6312,
+      "sha256": "46390f5398aca0b88ff066002ca3e80b8c26951ad37567ecaf9509bc45b8afc3"
+    },
+    {
+      "path": "official-addon/focus-edition/build.sh",
+      "bytes": 8969,
+      "sha256": "d0fe09bda9d2dd7b8381553bdc2e73b4231af92e5835e2bd177160b0f689e780"
+    },
+    {
+      "path": "official-addon/focus-edition/reader.c",
+      "bytes": 9867,
+      "sha256": "f0f0a4078b081519e321f5a355667fdc554aa310678077ae19af624b05910169"
+    },
+    {
+      "path": "official-addon/focus-edition/reader.h",
+      "bytes": 1948,
+      "sha256": "467e6466012e39ef44dc3f067f824b78605ac1e5a8c46981d69f4c00e880dbe0"
+    },
+    {
+      "path": "official-addon/focus-edition/test-cue-cards.sh",
+      "bytes": 2543,
+      "sha256": "8a4e3dbe7e1cee7f369ea5d197b2363b5741ea3f690e8df52b5ee5e5c60b2034"
+    },
+    {
+      "path": "official-addon/focus-edition/test-heart-rate.sh",
+      "bytes": 1554,
+      "sha256": "47d97f71e429a3cecd6fde031883636d89d38992cde16ac22bd0f38d76105420"
+    },
+    {
+      "path": "official-addon/focus-edition/test-openio-todo.sh",
+      "bytes": 1131,
+      "sha256": "dfabbd82b6d87bef320e2772457a1859738bfdf114ea10b95898c117c86589dd"
+    },
+    {
+      "path": "official-addon/focus-edition/test-ota-profiles.sh",
+      "bytes": 968,
+      "sha256": "d3fc029f9bdb43ee29615f46eeeff803b4dcbdb69507983da7dd36fb12e7baf5"
+    },
+    {
+      "path": "official-addon/focus-edition/test-workout.sh",
+      "bytes": 764,
+      "sha256": "7a1333aa39ff1d85c93e880dbc9ef07893e2967e6ed0464d4a958eb53b7f4ad8"
+    },
+    {
+      "path": "official-addon/package.mjs",
+      "bytes": 19603,
+      "sha256": "aee0a2a80b248142b12a848e3657b0de7b623fe1cbe5928c4c75967a93bbb694"
+    },
+    {
+      "path": "official-addon/package.test.mjs",
+      "bytes": 7148,
+      "sha256": "30dc81e96deb93f4a2154029389bf266bf2b5026c3064a0b3ed6edd0678c4a1a"
+    }
+  ]
+}
